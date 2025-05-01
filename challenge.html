@@ -6,7 +6,7 @@
 -->
 <html xmlns="http://www.w3.org/1999/html">
 <head>
-    <title>ACMMM MEGC2024</title>
+    <title>ACMMM MEGC2025</title>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
     <link href="assets/css/main.css" rel="stylesheet"/>
@@ -18,8 +18,8 @@
     <header id="header">
         <div class="logo container">
             <div>
-                <h1><a href="index.html" id="logo">ACM MM MEGC2024 </a></h1>
-                <p>Facial Micro-Expression Grand Challenge 2024</p>
+                <h1><a href="index.html" id="logo">ACM MM MEGC2025 </a></h1>
+                <p>Facial Micro-Expression Grand Challenge 2025</p>
             </div>
         </div>
     </header>
@@ -34,22 +34,23 @@
 <!--                    <li><a href="workshop.html#submission">Submission</a></li>-->
 <!--                </ul>-->
 <!--            </li>-->
-            <li
-                    class="current"><a href="challenge.html">MEGC2024 Challenge</a>
+            <!-- MENU -->
+            <li><a href="challenge.html">MEGC2025 Challenge</a>
                 <ul>
                     <li><a href="challenge.html#dates">Important Dates</a></li> 
-                    <li><a href="challenge.html#CCS">Cross-Cultural Spotting (CCS)</a></li>
-                    <li><a href="challenge.html#STR">Spot-then-Recognize (STR)</a></li>
+                    <li><a href="challenge.html#STR">Spot-then-Recognize (STR) Task </a></li>
+                    <li><a href="challenge.html#VQA">Visual Question Answering (VQA) Task</a></li>
                     <!-- <li><a href="challenge.html#training">Recommended Training Databases</a></li> -->
                     <li><a href="challenge.html#submission">Submission</a></li>
-                    <li><a href="challenge.html#questions">Frequently Asked Questions</a></li>
-                    <li><a href="challenge.html#winners">Winners</a></li>
+                    <!-- <li><a href="challenge.html#winners">Top three winners</a></li> -->
+                    <!-- <li><a href="challenge.html#questions">Frequently Asked Questions</a></li> -->
+                    <!-- <li><a href="challenge.html#winners">Winners</a></li> -->
                 </ul>
-            </li>
-            <!-- <li><a href="workshop.html">FME2023 Workshop</a></li> -->
-            <li><a href="program.html">Program</a></li>
-            <li><a href="organisers.html">Organisers</a></li>
-            <li><a href="review.html">Continuity</a></li>
+                </li>
+                <li><a href="program.html">Program</a></li>
+                <li><a href="organisers.html">Organisers</a></li>
+                <li><a href="review.html">Continuity</a></li>
+                <!-------------END OF MENU--------------->
         </ul>
     </nav>
 
@@ -59,11 +60,11 @@
 
             <!-- Pre-amble section -->
             <section>
-                Click <a href="files/CfP_MEGC2024_final.pdf">here</a> to download the CFP.
+                <!-- Click <a href="files/CfP_MEGC2024_final.pdf">here</a> to download the CFP. -->
                 This year's Grand Challenge comprises of two tracks:
                 <ul>
-                    <li><a href="#CCS">Cross-Cultural Spotting (CCS) Challenge</a> | <a href="https://codalab.lisn.upsaclay.fr/competitions/18524" target="_blank">Codalab site</a></li>
-                    <li><a href="#STR">Spot-then-Recognize (STR) Challenge</a> | <a href="https://codalab.lisn.upsaclay.fr/competitions/19359" target="_blank">Codalab site</a></li>
+                    <li><a href="#VQA">Spot-then-Recognize (STR) Challenge</a> | Codalab site <font color="red">(TBA soon!)</font> </li>
+                    <li><a href="#STR">Cross-Cultural Spotting (CCS) Challenge</a> | Codalab site <font color="red">(TBA soon!)</font></li>
                 </ul>
                 <!--
                 <p><b>UPDATE</b>: The leaderboard will be closing on 13th July, 9:00, Anywhere on Earth (AoE), and the top 3 entries on the leaderboard will be invited to submit papers to the conference by <b>14th July AoE (the official hard deadline of ACM MM grand challenges)</b>.
@@ -94,26 +95,83 @@
                 <h2 class="major"><span>Important Dates</span></h2>
                 <ul>
                     <li><b>Submission Open:</b>
-                        20th June 2024 </li>    
-                    <li><b>Submission Deadline (for both Codalab submission and Paper):</b>
-                        <strike>29th July 2024</strike> <font color="red">6th August 2024</font><b>(FIRM)</b></li>
-                    <li><b>Notification of Results and Accepted Papers:</b>
-                        <strike>5th August 2024</strike> <font color="red">12th August 2024</font> </li>
+                        19th May 2025 <font color="red">(Tentative)</font> </li>    
+                    <li><b>Challenge Submission Deadline (for Codalab only):</b>
+                        20th June 2025 <font color="red">(Tentative)</font></li>
+                    <li>Paper Invitation after confirmation of results
+                        <i>circa</i> 1st July 2025</li>
+                    <li>Paper Submission deadline
+                        <i>circa</i> 30st July 2025</li>
+                    <li><b>Notification of Accepted Papers:</b>
+                        <i>circa</i> 7th August 2025</li>
                     <li><b>Camera-Ready Deadline</b>
-                        19th August 2024 <b>(FIRM)</b></li>
+                        26th August 2024 </li>
                     </ul>                                   
             </section>
-
-            <!-- Track 1 CCS Section -->
+            
+            <!-- Track 1 STR Section -->
             <section>
-                <a name="CCS"></a>
+                <a name="STR"></a>
                 <header class="main">
-                    <h2 class="major"><span>Cross-Cultural Spotting (CCS) Task</span></h2>
+                    <h2 class="major"><span>Spot-then-Recognize (STR) Task</span></h2>
                 </header>
 
-                <p>To facilitate the establishment of robust and transferable ME spotting methods, an unseen cross-cultural long video test set will be used to validate the efficacy of spotting algorithms. By “unseen” and “cross-cultural”, we mean that the data has not been publicly released, and consists of subjects from diverse ethnicities and cultures. All participating algorithms are required to run on this test set and submit their results for spotting micro- and macro-expressions.</p>
+                <p>Since the rapid advancement of ME research started about a decade ago, most works have been mainly focused on two separate tasks: spotting and recognition. The task of only recognizing the ME class can be unrealistic in real-world settings since it assumes that the ME sequence has already been identified - an ill-posed problem in the case of a continuous-running video. On the other hand, the spotting task is unrealistic in its applicability since it cannot interpret the actual emotional state of the person observed. 
+                </p>
+                    
+                <p>A more realistic setting, also known as "spot-then-recognize", performs spotting followed by recognition in a sequential manner. Only samples that have been correctly spotted in the spotting step (i.e. true positives) will be passed on to the recognition step to be classified for its emotion class.
+                The task will apply leave-one-subject-out (LOSO) cross-validation, and evaluated individually on the CAS(ME)<sup>2</sup> and SAMM Long Video datasets using <a href="#STR-eval">selected metrics</a>.</p> 
 
-                <p>The unseen test set, which was first used in MEGC2023, will contain at least 30 long videos curated from unreleased data of the SAMM and CAS(ME)<sup>3</sup> datasets. Both these datasets have different video frame rates (SAMM: 200 fps; CAS(ME)<sup>3</sup>: 30 fps), which will challenge participants to submit techniques that are also robust toward temporal sampling. For learning-based techniques, participants can use any kind of training set or combination of training sets, from the vast <a href="#training">selection of databases available</a>.</p> 
+                Reference:
+                    <ul>
+                        <li>Liong, G-B., See, J. and C.S. Chan (2023). Spot-then-recognize: A micro-expression analysis network for seamless evaluation
+                            of long videos.
+                         <i>Signal Processing: Image Communication</i>, vol. 110, pp. 116875, January 2023, doi: 10.1016/j.image.2022.116875
+                         </li>
+                     </ul>
+
+                <p></p>
+                <a name="STR-eval"></a>
+                <h3>Evaluation Protocol</h3>
+                <ul>
+                    <li>Submissions will use the Codalab Competition Leaderboard.</li>                   
+                    <li>Participants should upload the predicted results for both CAS(ME)<sup>2</sup> and SAMM Long Video datasets to the <a href="https://codalab.lisn.upsaclay.fr/competitions/19359">Codalab Leaderboard (https://codalab.lisn.upsaclay.fr/competitions/19359)</a>    
+                        where specific evaluation metrics will be calculated.
+                    </li>
+                    <li>Since there are no specific train-test partitions, leave-one-subject-out (LOSO) cross-validation must be used to perform spotting on the held-out samples. 
+                        The true positive (TP) intervals from the Spotting step should be passed onto the Analysis step to predict the emotion class. Sample code from <a href="https://github.com/genbing99/MEAN_Spot-then-recognize" target="_blank">here</a> can be used as template or reference.</li> 
+                    <li><b>Evaluation metrics</b> (for SAMM, CAS): 
+                        <ul>
+                            <li>F1-score, for Spotting and Analysis steps. <em>(Higher the better)</em></li>
+                            <li>Spot-then-Recognize Score (STRS), which is the product of the Spotting and Analysis F1-scores. <em>(Higher the better)</em></li>
+                        </ul>
+                    </li>
+                    <li>Submissions to the Leaderboard must be made in the form of a <b>zip</b> file containining the predicted csv files with the following filenames:<br />
+                        <ul>
+                            <li><code>cas_pred.csv</code> (for the CAS(ME)<sup>2</sup> samples)</li>
+                            <li><code>samm_pred.csv</code> (for the SAMM Long Video samples)</li>
+                        </ul>
+                    </li>
+                    <li>An example submission is provided here: <a href="files/example_submission_STR.zip">example_submission_STR</a>.</li>
+                    <li>The evaluation script is available at <a href="https://github.com/genbing99/STRS-Metric">https://github.com/genbing99/STRS-Metric</a>.</li>
+                    <li>The <b>baseline</b> method can be found in the following paper (please cite): 
+                        <br/>
+                        Liong, G-B., See, J. and C.S. Chan (2023). Spot-then-recognize: A micro-expression analysis network for seamless evaluation
+                        of long videos. Signal Processing: Image Communication, Vol. 110, pp. 116875.
+                    </li>        
+                </ul>
+            </section>
+
+            <!-- Track 2 VQA Section -->
+            <section>
+                <a name="VQA"></a>
+                <header class="main">
+                    <h2 class="major"><span>Visual Question Answering (VQA) Task</span></h2>
+                </header>
+
+                <p>For the first time in MEGC 2025, this is a new task introduces a visual question answering challenge for ME analysis, to leverage on advanced vision-language models (VLMs) and multimodal large language models (LLMs). Instead of relying on structured labels, ME annotations such as stimuli types, actions units (AUs), timestamps, and emotion classes are converted into question-answer (QA) pairs. Given an image or video sequence as input with natural language prompts, models must generate answers that describe the ME, its attributes, etc.. These questions can cover a wide range of attributes, from simple binary classification such as <i>"Is there a micro-expression in this frame?"</i> to more complex inquiries like <i>"What emotion is being expressed, and what action units are activated?"</i></p>
+
+                <p>Participants may train the model based on the <a href="#training">current curated ME datasets</a> or explore zero-shot reasoning, in-context learning, multi-agent systems, etc. without specific training. Evaluation will assess the accuracy, relevance and coherence of responses using established VQA metrics such as BLEU and ROUGE, alongside tradtional ME spotting and recognition metrics. In addition to automatic metrics, human evaluation may be used to gauge the reasoning quality of the models. This task provides a new multimodal perspective on ME analysis, encouraging interpretable and context-aware ME analysis through natural language interaction.</p> 
 
                 <h3>Recommended Training Databases</h3>  <a name="training"></a>
                 <uL>
@@ -176,168 +234,27 @@
                             <li>
                                 Reference: Li, X., Cheng, S., Li, Y., Behzad, M., Shen, J., Zafeiriou, S., ... & Zhao, G. (2022). 4DME: A spontaneous 4D micro-expression dataset with multimodalities. IEEE Transactions on Affective Computing.
                             </li>
-
                         </uL>
-
-
                 </uL>
                 <p></p>
 
-                <h3>Unseen Test Dataset</h3>  <a name="test"></a>
-                <ul>
-                    <li>This year, we will be using the same unseen cross-cultural long-video test set as MEGC2023 to evaluate spotting algorithms' performances in a fairer manner.
+                <!--
+                <h3>Test Prompts</h3>  <a name="test"></a>
+                -->
 
-                    <li>The unseen testing set (<code><b>MEGC2023-testSet</b></code>) contains 30 long video, including 10 long videos from
-                        SAMM
-                        (SAMM Challenge dataset) and 20 clips cropped from different videos in CAS(ME)<sup>3</sup> (unreleased before). The
-                        frame rate for SAMM Challenge dataset is 200fps and the frame rate for CAS(ME)<sup>3</sup> is 30 fps. The participants should test on this unseen dataset.
-                    <LI>To obtain the <code><b>MEGC2023-testSet</b></code>, download and fill in the <a
-                            href="files/SAMM_ReleaseAgreementV2.pdf">license agreement form of SAMM Challenge
-                        dataset</a> and
-                        the <a href="files/CAS3_clip_ReleaseAgreement.pdf">license agreement form of CAS(ME)<sup>3</sup>_clip</a>,
-                        upload the file through this
-                        link: <a href="https://www.wjx.top/vm/PpmFKf7.aspx# ">https://www.wjx.top/vm/PpmFKf7.aspx# </a>.
-
-                        <uL>
-                            <li> For the request from a bank or company, the participants are required to ask their director or
-                                CEO to sign the form.
-                            </li>
-                            <li> Reference:
-                                <ol>
-                                    <li> Li, J., Dong, Z., Lu, S., Wang, S.J., Yan, W.J., Ma, Y., Liu, Y., Huang, C. and
-                                        Fu, X. (2023). CAS(ME)<sup>3</sup>: A Third Generation Facial Spontaneous
-                                        Micro-Expression Database with Depth Information and High Ecological Validity.
-                                        <i>IEEE Transactions on Pattern Analysis and Machine Intelligence</i>, vol. 45, no. 3, pp. 2782-2800, 1 March 2023, doi: 10.1109/TPAMI.2022.3174895.
-                                    </li>
-                                    <li> Davison, A. K., Lansley, C., Costen, N., Tan, K., & Yap, M. H. (2016). SAMM: A
-                                        spontaneous micro-facial movement dataset. <i>IEEE Transactions on Affective
-                                        Computing</i>, 9(1),
-                                        116-129.
-                                    </li>
-                                </ol>
-
-                            </li>
-
-
-                        </uL>
-                </LI>
-                </uL>
-
-                <p></p>
-                <h3>Evaluation Protocol</h3>  <a name="CCS-eval"></a>
-                <ul>
-                    <li>Submissions will use the Codalab Competition Leaderboard.</li>                   
-                    <li>Participants should test their proposed algorithm on the unseen dataset by uploading the predicted result
-                        to the <a href="https://codalab.lisn.upsaclay.fr/competitions/18524">Codalab Leaderboard (https://codalab.lisn.upsaclay.fr/competitions/18524)</a> where the evaluation metrics will be calculated.
-                    </li>
-                    <li><b>Evaluation metrics</b>: F1-Score (Overall, SAMM, CAS), Precision (Overall, SAMM, CAS), Recall (Overall, SAMM, CAS)</li>
-                    <li>Submissions to the Leaderboard must be made in the form of a <b>zip</b> file containining the predicted csv files with the following filenames:<br />
-                        <ul>
-                            <li><code>cas_pred.csv</code> (for the CAS(ME)<sup>3</sup> samples)</li>
-                            <li><code>samm_pred.csv</code> (for the SAMM samples)</li>
-                        </ul>
-                    </li>
-                    <li>An example submission is provided here: <a href="files/example_submission.zip">example_submission</a>
-                           and <a href="files/example_submission_withoutExpType.zip">example_submission_withoutExpType</a>.
-                    </li>
-                    <li>Note: For submissions without labelling expression type (me or mae), the labelling
-                        will be done automatically using ME threshold of 0.5s (15 frames for CAS and 100
-                        frames for SAMM).
-                    </li>
-                    <li>The <b>baseline</b> method can be found in the following paper (please cite): 
-                        <br/>
-                        Zhang, L. W., Li, J., Wang, S. J., Duan, X. H., Yan, W. J., Xie, H. Y., & Huang, S. C. (2020, November). Spatio-temporal fusion for macro-and micro-expression spotting in long video sequences. In 2020 15th IEEE International Conference on Automatic Face and Gesture Recognition (FG 2020) (pp. 734-741). IEEE.
-                        <br>
-                        while previous submissions to MEGC2023 can be found here: <a
-                            href="https://codalab.lisn.upsaclay.fr/competitions/14254">Leaderboard</a>
-                    </li>        
-                </ul>
-                    <!--
-                    <Li><b>submission stage</b>: TBD
-                        <ul>
-                            <li> The participants could upload the result and then the Leaderboards will
-                                calculate the metrics.
-
-                            <li> The evaluation result of other participants and the ranking will not be provided
-                                during this stage. You could compare your result with the provided baseline result.
-                            </li>
-                        </ul>
-                    <Li><b>Live Leaderboard stage</b>: TBD
-                        <ul>
-                            <li> Results uploaded after submission deadline will not be considered by ACM MEGC2023 for the
-                                final ranking of the competition.
-                            <li>However, any research team interested in the spotting task can upload results to
-                                validate the performance of their method.
-                            <li> The leaderboard will calculate and display the uploaded results and real-time
-                                ranking.
-                        </ul>
-                    -->
-                </ul>
-            </section>
-            
-            <!-- Track 2 STR Section -->
-            <section>
-                <a name="STR"></a>
-                <header class="main">
-                    <h2 class="major"><span>Spot-then-Recognize (STR) Task</span></h2>
-                </header>
-
-                <p>Since the rapid advancement of ME research started about a decade ago, most works have been mainly focused on two separate tasks: spotting and recognition. The task of only recognizing the ME class can be unrealistic in real-world settings since it assumes that the ME sequence has already been identified - an ill-posed problem in the case of a continuous-running video. On the other hand, the spotting task is unrealistic in its applicability since it cannot interpret the actual emotional state of the person observed. 
-                </p>
-                    
-                <p>A more realistic setting, also known as "spot-then-recognize", performs spotting followed by recognition in a sequential manner. Only samples that have been correctly spotted in the spotting step (i.e. true positives) will be passed on to the recognition step to be classified for its emotion class.
-                The task will apply leave-one-subject-out (LOSO) cross-validation, and evaluated individually on the CAS(ME)<sup>2</sup> and SAMM Long Video datasets using <a href="#STR-eval">selected metrics</a>.</p> 
-
-                Reference:
-                    <ul>
-                        <li>Liong, G-B., See, J. and C.S. Chan (2023). Spot-then-recognize: A micro-expression analysis network for seamless evaluation
-                            of long videos.
-                         <i>Signal Processing: Image Communication</i>, vol. 110, pp. 116875, January 2023, doi: 10.1016/j.image.2022.116875
-                         </li>
-                     </ul>
-
-                <p></p>
-                <a name="STR-eval"></a>
-                <h3>Evaluation Protocol</h3>
-                <ul>
-                    <li>Submissions will use the Codalab Competition Leaderboard.</li>                   
-                    <li>Participants should upload the predicted results for both CAS(ME)<sup>2</sup> and SAMM Long Video datasets to the <a href="https://codalab.lisn.upsaclay.fr/competitions/19359">Codalab Leaderboard (https://codalab.lisn.upsaclay.fr/competitions/19359)</a>    
-                        where specific evaluation metrics will be calculated.
-                    </li>
-                    <li>Since there are no specific train-test partitions, leave-one-subject-out (LOSO) cross-validation must be used to perform spotting on the held-out samples. 
-                        The true positive (TP) intervals from the Spotting step should be passed onto the Analysis step to predict the emotion class. Sample code from <a href="https://github.com/genbing99/MEAN_Spot-then-recognize" target="_blank">here</a> can be used as template or reference.</li> 
-                    <li><b>Evaluation metrics</b> (for SAMM, CAS): 
-                        <ul>
-                            <li>F1-score, for Spotting and Analysis steps. <em>(Higher the better)</em></li>
-                            <li>Spot-then-Recognize Score (STRS), which is the product of the Spotting and Analysis F1-scores. <em>(Higher the better)</em></li>
-                        </ul>
-                    </li>
-                    <li>Submissions to the Leaderboard must be made in the form of a <b>zip</b> file containining the predicted csv files with the following filenames:<br />
-                        <ul>
-                            <li><code>cas_pred.csv</code> (for the CAS(ME)<sup>2</sup> samples)</li>
-                            <li><code>samm_pred.csv</code> (for the SAMM Long Video samples)</li>
-                        </ul>
-                    </li>
-                    <li>An example submission is provided here: <a href="files/example_submission_STR.zip">example_submission_STR</a>.</li>
-                    <li>The evaluation script is available at <a href="https://github.com/genbing99/STRS-Metric">https://github.com/genbing99/STRS-Metric</a>.</li>
-                    <li>The <b>baseline</b> method can be found in the following paper (please cite): 
-                        <br/>
-                        Liong, G-B., See, J. and C.S. Chan (2023). Spot-then-recognize: A micro-expression analysis network for seamless evaluation
-                        of long videos. Signal Processing: Image Communication, Vol. 110, pp. 116875.
-                    </li>        
-                </ul>
             </section>
 
             <!-- Submission Section -->
             <section>
                 <a name="submission"></a>
                 <h2 class="major"><span>Submission</span></h2>
-                <p> Please note: The submission deadline is at 11:59 p.m. of the stated deadline date <a
-                        href="https://www.timeanddate.com/time/zones/aoe">Anywhere</a> on Earth (AoE).</p>
+                <p> Please note: All relevant submission deadlines are at 23:59 <a
+                    href="https://www.timeanddate.com/time/zones/aoe">AoE</a> and paper submissions will follow guidelines as per ACM.</p>
                 <ul>
-                    <li><b>Challenge submission platform for CCS task: <a href="https://codalab.lisn.upsaclay.fr/competitions/18524">https://codalab.lisn.upsaclay.fr/competitions/18524</a></b></li> 
-                    <li><b>Challenge submission platform for STR task: <a href="https://codalab.lisn.upsaclay.fr/competitions/19359">https://codalab.lisn.upsaclay.fr/competitions/19359</a></b></li>                
-                    <li><b>Submission guidelines:</b>
+                    <li><b>Challenge submission platform for STR task: TBC</b></li> 
+                    <li><b>Challenge submission platform for VQA task: TBC</b></ul>li>                
+                    <li><b>Submission guidelines: TBC</b>
+ <!--
                         <ul>
                             <li>Submitted papers (.pdf format) must use the ACM Article Template <a
                                 href="https://www.acm.org/publications/proceedings-template">https://www.acm.org/publications/proceedings-template</a>
@@ -358,12 +275,13 @@
                                 2) did not share the code repository and reported results for verification purposes. 
                             </li>
                         </uL>
-
+-->
                 </li>
                 </ul>
             </section>
 
-            
+    <!-- WINNERS --> 
+     <!--        
             <section>
                  <h2 class="major"><span>Winners</span></h2><a name="winners"></a>
 
@@ -553,8 +471,8 @@
         <!-- Copyright -->
         <div id="copyright">
             <ul class="menu">
-                <li>GET IN TOUCH: j.see@hw.ac.uk, lijt@psych.ac.cn</li>
-                <li>&copy; MEGC2024. All rights reserved</li>
+                <li>GET IN TOUCH: x.fan@mmu.ac.uk | j.see@hw.ac.uk | lijt@psych.ac.cn</li>
+                <li>&copy; MEGC2025. All rights reserved</li>
                 <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
             </ul>
         </div>
