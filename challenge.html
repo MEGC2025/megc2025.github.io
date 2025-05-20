@@ -160,22 +160,7 @@
                         of long videos. Signal Processing: Image Communication, Vol. 110, pp. 116875.
                     </li>        
                 </ul>
-            </section>
 
-            <!-- Track 2 VQA Section -->
-            <section>
-                <a name="VQA"></a>
-                <header class="main">
-                    <h2 class="major"><span>Visual Question Answering (VQA) Task</span></h2>
-                </header>
-
-                <p>For the first time in MEGC 2025, this is a new task that introduces a visual question answering challenge for ME analysis, to leverage on advanced vision-language models (VLMs) and multimodal large language models (LLMs). Instead of relying on structured labels, ME annotations, such as emotion classes, action units, are converted into question-answer (QA) pairs. Given an image or video sequence as input with natural language prompts, models must generate answers that describe the ME, its attributes, etc. These questions can cover a wide range of attributes, from binary classification such as <i>"Is the action unit lip corner depressor shown on the face?"</i> to multiclass classification like <i>"What is the expression class?"</i>, and to more complex inquiries like <i>"What are the action units present, and based on them, what is the expression class?"</i></p>
-
-                <p>Participants may train the model based on the <a href="https://megc2024.github.io/files/me_vqa_samm_casme2_smic.jsonl">curated ME VQA datasets</a> or explore zero-shot reasoning, in-context learning, multi-agent systems, etc. Evaluation will assess the UF1 and UAR of the emotion classes, and NLP metrics BLEU and ROUGE of overall responses. In addition to automatic metrics, human evaluation may be used to gauge the reasoning quality of the models. This task provides a new multimodal perspective on ME analysis, encouraging interpretable and context-aware ME analysis through natural language interaction.</p> 
-		
-		<p>The curated ME VQA dataset is improved from the MEGC2019 composite dataset with clips from CASME II, SAMM, and SMIC by adding QA pairs. The participant can use it as a starting point, while they can also include other training samples and generate their own QA pairs.
-	    </section>
-	    <section>
                 <h3>Recommended Training Databases</h3>  <a name="training"></a>
                 <uL>
                     <LI><b>SAMM Long Videos with 147 long videos at 200 fps (average duration: 35.5s).</b>
@@ -246,6 +231,119 @@
                 -->
 
             </section>
+
+            <!-- Track 2 VQA Section -->
+            <section>
+                <a name="VQA"></a>
+                <header class="main">
+                    <h2 class="major"><span>Visual Question Answering (VQA) Task</span></h2>
+                </header>
+
+                <p>For the first time in MEGC 2025, this is a new task that introduces a visual question answering challenge for ME analysis, to leverage on advanced vision-language models (VLMs) and multimodal large language models (LLMs). Instead of relying on structured labels, ME annotations, such as emotion classes, action units, are converted into question-answer (QA) pairs. Given an image or video sequence as input with natural language prompts, models must generate answers that describe the ME, its attributes, etc. These questions can cover a wide range of attributes, from binary classification such as <i>"Is the action unit lip corner depressor shown on the face?"</i> to multiclass classification like <i>"What is the expression class?"</i>, and to more complex inquiries like <i>"What are the action units present, and based on them, what is the expression class?"</i></p>
+
+                <p>Participants may train the model based on the <a href="https://megc2024.github.io/files/me_vqa_samm_casme2_smic.jsonl">curated ME VQA datasets</a> or explore zero-shot reasoning, in-context learning, multi-agent systems, etc. Evaluation will assess the UF1 and UAR of the emotion classes, and NLP metrics BLEU and ROUGE of overall responses. In addition to automatic metrics, human evaluation may be used to gauge the reasoning quality of the models. This task provides a new multimodal perspective on ME analysis, encouraging interpretable and context-aware ME analysis through natural language interaction.</p> 
+		
+		        <p>The curated ME VQA dataset is improved from the MEGC2019 composite dataset with clips from CASME II, SAMM, and SMIC by adding QA pairs. The participant can use it as a starting point, while they can also include other training samples and generate their own QA pairs.
+                
+                <p></p>
+                <a name="VQA-eval"></a>
+                <h3>Evaluation Protocol</h3>
+                <ul>
+                    <li>Submissions will use the Codalab Competition Leaderboard.</li>                   
+                    <li>Participants should upload the predicted results for both unseen CAS(ME)<sup>3</sup> and SAMM datasets to the Codalab Leaderboard where specific evaluation metrics will be calculated.</li>
+                    <li><b>Evaluation metrics</b> (for SAMM, CAS): 
+                        <ul>
+                            <li>UF1 and UAR for both coarse and fine-grained emotion class. <em>(Higher the better)</em></li>
+                            <li>BLEU and ROUGH-1 for all the answers. <em>(Higher the better)</em></li>
+                        </ul>
+                    </li>
+                    <li>Participants can fill in the test VQA to-answer josonl files and renamed them as xxx_pred.jsonl:<br />
+                        <ul>
+                            <li><code><a href="https://megc2024.github.io/files/me_vqa_casme3_test_to_answer.jsonl">me_vqa_casme3_test_to_answer.jsonl</a></code></li>
+                            <li><code><a href="https://megc2024.github.io/files/me_vqa_samm_test_to_answer.jsonl">me_vqa_samm_test_to_answer.jsonl</a></code></li>
+                        </ul>
+                    </li>
+                    <li>Submissions to the Leaderboard must be made in the form of a <b>zip</b> file containining the predicted jsonl files with the following filenames:<br />
+                        <ul>
+                            <li><code>me_vqa_casme3_test_pred.jsonl</code> (for the unseen CAS(ME)<sup>3</sup> ME clips)</li>
+                            <li><code>me_vqa_samm_test_pred.jsonl</code> (for the unseen SAMM ME clips)</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h3>Recommended Training Databases</h3>  <a name="training"></a>
+                <uL>
+                    <LI><b>SAMM.</b>
+                        <uL>
+                            <li> To download the dataset, please visit: <a
+                                    href="http://www2.docm.mmu.ac.uk/STAFF/M.Yap/dataset.php">http://www2.docm.mmu.ac.uk/STAFF/M.Yap/dataset.php</a>.
+                                Download and fill in the license agreement form, email to <a href="M.Yap@mmu.ac.uk">M.Yap@mmu.ac.uk</a>
+                                with email subject: SAMM videos.
+                            </li>
+                            <li>
+                                Reference: Yap, C. H., Kendrick, C., & Yap, M. H. (2020, November). SAMM long videos: A
+                                spontaneous facial micro-and macro-expressions dataset. In 2020 15th IEEE International
+                                Conference on Automatic Face and Gesture Recognition (FG 2020) (pp. 771-776). IEEE.
+                            </li>
+                        </uL>
+
+                    <LI><b> CASME II .</b>
+                        <uL>
+                            <li> To download the dataset, please visit: <a
+                                    href="http://casme.psych.ac.cn/casme/e3">http://casme.psych.ac.cn/casme/e3</a>.  Download and fill in the license agreement form, submit throuth the website.
+                            >.
+                            </li>
+                            <li>
+                                Reference: Qu, F., Wang, S. J., Yan, W. J., Li, H., Wu, S., & Fu, X. (2017). CAS (ME) $^
+                                2$: a database for spontaneous macro-expression and micro-expression spotting and
+                                recognition. IEEE Transactions on Affective Computing, 9(4), 424-436.
+                            </li>
+
+                        </uL>
+
+                    <LI><b>SMIC-E-long with 162 long videos at 100 fps (average duration: 22s).</b>
+                        <uL>
+                            <li> To download the dataset, please visit: <a href="https://www.oulu.fi/cmvs/node/41319">https://www.oulu.fi/cmvs/node/41319</a>.
+                                Download and fill in the license agreement form (please indicate which version/subset
+                                you need), email to <a href="Xiaobai.Li@oulu.fi">Xiaobai.Li@oulu.fi</a>.
+                            </li>
+                            <li>
+                                Reference: Tran, T. K., Vo, Q. N., Hong, X., Li, X., & Zhao, G. (2021). Micro-expression
+                                spotting: A new benchmark. Neurocomputing, 443, 356-368.
+                            </li>
+                        </uL>
+                    <LI><b> CAS(ME)<sup>3</sup> with 1300 long videos at 30 fps (average duration: 98s).</b>
+                        <uL>
+                            <li> To download the dataset, please visit: <a
+                                    href="http://casme.psych.ac.cn/casme/e4">http://casme.psych.ac.cn/casme/e4</a>.
+                                Download and fill in the license agreement form, submit throuth the website.
+                            </li>
+                            <li>
+                                Reference: Li, J., Dong, Z., Lu, S., Wang, S. J., Yan, W. J., Ma, Y., ... & Fu, X. (2022). CAS (ME)<sup>3</sup>: A third generation facial spontaneous micro-expression database with depth information and high ecological validity. IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 45, no. 3, pp. 2782-2800, doi: 10.1109/TPAMI.2022.3174895..
+                            </li>
+
+                        </uL>
+                    <LI><b> 4DME with 270 long videos at 60 fps (average duration: 2.5s).</b>
+                        <uL>
+                            <li> To download the dataset, please visit: <a
+                                    href="https://www.oulu.fi/en/university/faculties-and-units/faculty-information-technology-and-electrical-engineering/center-machine-vision-and-signal-analysis">https://www.oulu.fi/en/university/faculties-and-units/faculty-information-technology-and-electrical-engineering/center-machine-vision-and-signal-analysis</a>.
+                                Download and fill in the license agreement form , email to <a href="Xiaobai.Li@oulu.fi">Xiaobai.Li@oulu.fi</a>.
+                            </li>
+                            <li>
+                                Reference: Li, X., Cheng, S., Li, Y., Behzad, M., Shen, J., Zafeiriou, S., ... & Zhao, G. (2022). 4DME: A spontaneous 4D micro-expression dataset with multimodalities. IEEE Transactions on Affective Computing.
+                            </li>
+                        </uL>
+                </uL>
+                <p></p>
+
+                <!--
+                <h3>Test Prompts</h3>  <a name="test"></a>
+                -->
+
+            </section>
+	    </section>
+
+ 
 
             <!-- Submission Section -->
             <section>
