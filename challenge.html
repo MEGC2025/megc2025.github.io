@@ -137,9 +137,7 @@
                 <h3>Evaluation Protocol</h3>
                 <ul>
                     <li>Submissions will use the Codalab Competition Leaderboard.</li>                   
-                    <li>Participants should upload the predicted results for both CAS(ME)<sup>2</sup> and SAMM Long Video datasets to the Codalab Leaderboard where specific evaluation metrics will be calculated.</li>
-                    <li>Since there are no specific train-test partitions, leave-one-subject-out (LOSO) cross-validation must be used to perform spotting on the held-out samples. 
-                        The true positive (TP) intervals from the Spotting step should be passed onto the Analysis step to predict the emotion class. Sample code from <a href="https://github.com/genbing99/MEAN_Spot-then-recognize" target="_blank">here</a> can be used as template or reference.</li> 
+                    <li>Participants should upload the predicted results for both the unseen CAS(ME)<sup>3</sup> and SAMM datasets to the Codalab Leaderboard where specific evaluation metrics will be calculated.</li>
                     <li><b>Evaluation metrics</b> (for SAMM, CAS): 
                         <ul>
                             <li>F1-score, for Spotting and Analysis steps. <em>(Higher the better)</em></li>
@@ -148,8 +146,8 @@
                     </li>
                     <li>Submissions to the Leaderboard must be made in the form of a <b>zip</b> file containining the predicted csv files with the following filenames:<br />
                         <ul>
-                            <li><code>cas_pred.csv</code> (for the CAS(ME)<sup>2</sup> samples)</li>
-                            <li><code>samm_pred.csv</code> (for the SAMM Long Video samples)</li>
+                            <li><code>cas_pred.csv</code> (for the CAS(ME)<sup>3</sup> samples)</li>
+                            <li><code>samm_pred.csv</code> (for the SAMM samples)</li>
                         </ul>
                     </li>
                     <li>An example submission is provided here: <a href="files/example_submission_STR.zip">example_submission_STR</a>.</li>
@@ -241,11 +239,13 @@
 
                 <p>For the first time in MEGC 2025, this is a new task that introduces a visual question answering challenge for ME analysis, to leverage on advanced vision-language models (VLMs) and multimodal large language models (LLMs). Instead of relying on structured labels, ME annotations, such as emotion classes, action units, are converted into question-answer (QA) pairs. Given an image or video sequence as input with natural language prompts, models must generate answers that describe the ME, its attributes, etc. These questions can cover a wide range of attributes, from binary classification such as <i>"Is the action unit lip corner depressor shown on the face?"</i> to multiclass classification like <i>"What is the expression class?"</i>, and to more complex inquiries like <i>"What are the action units present, and based on them, what is the expression class?"</i></p>
 
-                <p>Participants may train the model based on the <a href="https://megc2025.github.io/files/me_vqa_samm_casme2_smic.jsonl">curated ME VQA datasets</a> or explore zero-shot reasoning, in-context learning, multi-agent systems, etc. Evaluation will assess the UF1 and UAR of the emotion classes, and NLP metrics BLEU and ROUGE of overall responses. In addition to automatic metrics, human evaluation may be used to gauge the reasoning quality of the models. This task provides a new multimodal perspective on ME analysis, encouraging interpretable and context-aware ME analysis through natural language interaction.</p> 
+                <p>Participants may train the model based on the <a href="https://megc2025.github.io/files/me_vqa_samm_casme2_smic.jsonl">curated ME VQA datasets</a> or explore zero-shot reasoning, in-context learning, multi-agent systems, etc. Evaluation will assess the UF1 and UAR of the emotion classes, and NLP metrics BLEU and ROUGE of overall responses. In addition to automatic metrics, human evaluation may be used to gauge the reasoning quality of the models. This task provides a new multimodal perspective on ME analysis, encouraging interpretable and context-aware ME analysis through natural language interaction. 
 		
-		        <p>The curated ME VQA dataset is improved from the MEGC2019 composite dataset with clips from CASME II, SAMM, and SMIC by adding QA pairs. The participant can use it as a starting point, while they can also include other training samples and generate their own QA pairs.
+		        The curated ME VQA dataset is improved from the MEGC2019 composite dataset with clips from CASME II, SAMM, and SMIC by adding QA pairs. The participant can use it as a starting point, while they can also include other training samples and generate their own QA pairs.
+                </p>
                 
-                <p></p>
+                <p>Baseline paper is comming soon</p>
+
                 <a name="VQA-eval"></a>
                 <h3>Evaluation Protocol</h3>
                 <ul>
@@ -273,7 +273,14 @@
                 
                 <h3>Recommended Training Databases</h3>  <a name="training"></a>
                 <uL>
-                    <LI><b>SAMM.</b>
+                    <LI><b>Curated ME VQA dataset</b>
+                        <uL>
+                            <li> Please download the annotation from here <a href="https://megc2025.github.io/files/me_vqa_samm_casme2_smic.jsonl">Curated ME VQA dataset</a>.
+                            </li>
+                            <li> The Curated ME VQA dataset is improved from the MEGC2019 composite dataset with clips from SAMM, CASME II, and SMIC by adding QA pairs. Therefore, to access the ME clips, please follow the dataset request link below.
+                            </li>
+                        </uL>
+                    <LI><b>SAMM with 159 ME clips at 100 fps.</b>
                         <uL>
                             <li> To download the dataset, please visit: <a
                                     href="http://www2.docm.mmu.ac.uk/STAFF/M.Yap/dataset.php">http://www2.docm.mmu.ac.uk/STAFF/M.Yap/dataset.php</a>.
@@ -281,27 +288,23 @@
                                 with email subject: SAMM videos.
                             </li>
                             <li>
-                                Reference: Yap, C. H., Kendrick, C., & Yap, M. H. (2020, November). SAMM long videos: A
-                                spontaneous facial micro-and macro-expressions dataset. In 2020 15th IEEE International
-                                Conference on Automatic Face and Gesture Recognition (FG 2020) (pp. 771-776). IEEE.
+                                Reference: Dvison, A. K., Lansley, C., Costen, N., Tan, K., & Yap, M. H. (2016). SAMM: A spontaneous micro facial movement dataset. IEEE Transactions on Affective Computing, 9(1), 116-129.
                             </li>
                         </uL>
 
-                    <LI><b> CASME II .</b>
+                    <LI><b> CASME II with 247 ME clips at 200 fps.</b>
                         <uL>
                             <li> To download the dataset, please visit: <a
                                     href="http://casme.psych.ac.cn/casme/e3">http://casme.psych.ac.cn/casme/e3</a>.  Download and fill in the license agreement form, submit throuth the website.
                             >.
                             </li>
                             <li>
-                                Reference: Qu, F., Wang, S. J., Yan, W. J., Li, H., Wu, S., & Fu, X. (2017). CAS (ME) $^
-                                2$: a database for spontaneous macro-expression and micro-expression spotting and
-                                recognition. IEEE Transactions on Affective Computing, 9(4), 424-436.
+                                Reference: Yan, W. J., Li, X., Wang, S. J., Zhao, G., Liu, Y. J., Chen, Y. H., & Fu, X. (2014). CASME II: An improved spontaneous micro-expression database and the baseline evaluation. PloS one, 9(1), e86041.
                             </li>
 
                         </uL>
 
-                    <LI><b>SMIC-E-long with 162 long videos at 100 fps (average duration: 22s).</b>
+                    <LI><b>SMIC-E-long with 162 ME clips at 100 fps (average duration: 22s).</b>
                         <uL>
                             <li> To download the dataset, please visit: <a href="https://www.oulu.fi/cmvs/node/41319">https://www.oulu.fi/cmvs/node/41319</a>.
                                 Download and fill in the license agreement form (please indicate which version/subset
@@ -312,7 +315,7 @@
                                 spotting: A new benchmark. Neurocomputing, 443, 356-368.
                             </li>
                         </uL>
-                    <LI><b> CAS(ME)<sup>3</sup> with 1300 long videos at 30 fps (average duration: 98s).</b>
+                    <LI><b> CAS(ME)<sup>3</sup> with 1109 ME clips at 30 fps (average duration: 98s).</b>
                         <uL>
                             <li> To download the dataset, please visit: <a
                                     href="http://casme.psych.ac.cn/casme/e4">http://casme.psych.ac.cn/casme/e4</a>.
@@ -323,7 +326,7 @@
                             </li>
 
                         </uL>
-                    <LI><b> 4DME with 270 long videos at 60 fps (average duration: 2.5s).</b>
+                    <LI><b> 4DME with 1068 ME clips at 60 fps (average duration: 2.5s).</b>
                         <uL>
                             <li> To download the dataset, please visit: <a
                                     href="https://www.oulu.fi/en/university/faculties-and-units/faculty-information-technology-and-electrical-engineering/center-machine-vision-and-signal-analysis">https://www.oulu.fi/en/university/faculties-and-units/faculty-information-technology-and-electrical-engineering/center-machine-vision-and-signal-analysis</a>.
@@ -341,10 +344,7 @@
                 -->
 
             </section>
-	    </section>
-
- 
-
+	    
             <!-- Submission Section -->
             <section>
                 <a name="submission"></a>
@@ -353,7 +353,7 @@
                     href="https://www.timeanddate.com/time/zones/aoe">AoE</a> and paper submissions will follow guidelines as per ACM.</p>
                 <ul>
                     <li><b>Challenge submission platform for STR task: TBC</b></li> 
-                    <li><b>Challenge submission platform for VQA task: TBC</b></ul>li>                
+                    <li><b>Challenge submission platform for VQA task: TBC</b></ul></li>                
                     <li><b>Submission guidelines: TBC</b>
  <!--
                         <ul>
@@ -572,7 +572,7 @@
         <!-- Copyright -->
         <div id="copyright">
             <ul class="menu">
-                <li>GET IN TOUCH: x.fan@mmu.ac.uk | j.see@hw.ac.uk | lijt@psych.ac.cn</li>
+                <li>GET IN TOUCH: a.davison@mmu.ac.uk | x.fan@mmu.ac.uk | j.see@hw.ac.uk | lijt@psych.ac.cn</li>
                 <li>&copy; MEGC2025. All rights reserved</li>
                 <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
             </ul>
