@@ -37,7 +37,8 @@
             <!-- MENU -->
             <li><a href="challenge.html">MEGC2025 Challenge</a>
                 <ul>
-                    <li><a href="challenge.html#dates">Important Dates</a></li> 
+                    <li><a href="challenge.html#dates">Important Dates</a></li>
+                    <li><a href="challenge.html#unseenSet">Unseen Test Set</a></li>
                     <li><a href="challenge.html#STR">Spot-then-Recognize (STR) Task </a></li>
                     <li><a href="challenge.html#VQA">Visual Question Answering (VQA) Task</a></li>
                     <!-- <li><a href="challenge.html#training">Recommended Training Databases</a></li> -->
@@ -63,7 +64,7 @@
                 <!-- Click <a href="files/CfP_MEGC2024_final.pdf">here</a> to download the CFP. -->
                 This year's Grand Challenge comprises of two tracks:
                 <ul>
-                    <li><a href="#STR">Spot-then-Recognize (STR) Challenge</a> | Codabench site <font color="red">(TBA soon!)</font></li>
+                    <li><a href="#STR">Spot-then-Recognize (STR) Challenge</a> | <a href="https://www.codabench.org/competitions/8390/">Codabench site</a>  </li>
                     <li><a href="#VQA">Visual Question Answering (VQA)</a> | <a href="https://www.codabench.org/competitions/8435/">Codabench site</a>  </li>
                 </ul>
                 <!--
@@ -118,9 +119,10 @@
                     <h2 class="major"><span>Unseen dataset for both tasks</span></h2>
                 </header>
 
-               
-                   <p>This year, we will be using the same unseen cross-cultural long-video test set to evaluate spotting algorithms' performances in a fairer manner.
- </p>
+                <p>
+                    This year, we will be using the same unseen cross-cultural long-video test set to evaluate spotting algorithms'
+                    performances in a fairer manner.
+                </p>
 		     <ul>
                     <li>The unseen testing set (<code><b>MEGC2025-testSet</b></code>) (same version as MEGC2023 Unseen dataset) contains 30 long video, including 10 long videos from
                         SAMM
@@ -165,11 +167,17 @@
                     <h2 class="major"><span>Spot-then-Recognize (STR) Task</span></h2>
                 </header>
 
-                <p>Since the rapid advancement of ME research started about a decade ago, most works have been mainly focused on two separate tasks: spotting and recognition. The task of only recognizing the ME class can be unrealistic in real-world settings since it assumes that the ME sequence has already been identified - an ill-posed problem in the case of a continuous-running video. On the other hand, the spotting task is unrealistic in its applicability since it cannot interpret the actual emotional state of the person observed. 
+                <p>Since the rapid advancement of ME research started about a decade ago, most works have been mainly focused on
+                    two separate tasks: spotting and recognition. The task of only recognizing the ME class can be unrealistic in
+                    real-world settings since it assumes that the ME sequence has already been identified - an ill-posed problem in
+                    the case of a continuous-running video. On the other hand, the spotting task is unrealistic in its applicability
+                    since it cannot interpret the actual emotional state of the person observed.
                 </p>
                     
-                <p>A more realistic setting, also known as "spot-then-recognize", performs spotting followed by recognition in a sequential manner. Only samples that have been correctly spotted in the spotting step (i.e. true positives) will be passed on to the recognition step to be classified for its emotion class.
-                The task will apply leave-one-subject-out (LOSO) cross-validation, and evaluated individually on the CAS(ME)<sup>2</sup> and SAMM Long Video datasets using <a href="#STR-eval">selected metrics</a>.</p> 
+                <p>A more realistic setting, also known as "spot-then-recognize", performs spotting followed by recognition in a
+                    sequential manner. Only samples that have been correctly spotted in the spotting step (i.e. true positives)
+                    will be passed on to the recognition step to be classified for its emotion class.
+                The task will use the unseen dataset, and evaluated using <a href="#STR-eval">selected metrics</a>.</p> 
 
                 Reference:
                     <ul>
@@ -183,8 +191,9 @@
                 <a name="STR-eval"></a>
                 <h3>Evaluation Protocol</h3>
                 <ul>
-                    <li>Submissions will use the Codalab Competition Leaderboard.</li>                   
-                    <li>Participants should upload the predicted results for both the unseen CAS(ME)<sup>3</sup> and SAMM datasets to the Codalab Leaderboard where specific evaluation metrics will be calculated.</li>
+                    <li>Submissions will use the Codabench Competition Leaderboard.</li>                   
+                    <li>Participants should upload the predicted results for both the unseen CAS(ME)<sup>3</sup> and SAMM datasets to the
+                        Codabench Leaderboard where specific evaluation metrics will be calculated.</li>
                     <li><b>Evaluation metrics</b> (for SAMM, CAS): 
                         <ul>
                             <li>F1-score, for Spotting and Analysis steps. <em>(Higher the better)</em></li>
@@ -291,13 +300,14 @@
 		        The curated ME VQA dataset is improved from the MEGC2019 composite dataset with clips from CASME II, SAMM, and SMIC by adding QA pairs. The participant can use it as a starting point, while they can also include other training samples and generate their own QA pairs.
                 </p>
                 
-                <p>Baseline paper is comming soon</p>
+                <p>Baseline paper is coming soon</p>
 
                 <a name="VQA-eval"></a>
                 <h3>Evaluation Protocol</h3>
                 <ul>
-                    <li>Submissions will use the Codalab Competition Leaderboard.</li>                   
-                    <li>Participants should upload the predicted results for both unseen CAS(ME)<sup>3</sup> and SAMM datasets to the Codalab Leaderboard where specific evaluation metrics will be calculated.</li>
+                    <li>Submissions will use the Codabench Competition Leaderboard.</li>                   
+                    <li>Participants should upload the predicted results for both unseen CAS(ME)<sup>3</sup> and SAMM datasets to the
+                        Codabench Leaderboard where specific evaluation metrics will be calculated.</li>
                     <li><b>Evaluation metrics</b> (for SAMM, CAS): 
                         <ul>
                             <li>UF1 and UAR for both coarse and fine-grained emotion class. <em>(Higher the better)</em></li>
@@ -310,7 +320,8 @@
                             <li><code><a href="https://megc2025.github.io/files/me_vqa_samm_test_to_answer.jsonl">me_vqa_samm_test_to_answer.jsonl</a></code></li>
                         </ul>
                     </li>
-                    <li>Submissions to the Leaderboard must be made in the form of a <b>zip</b> file containining the predicted jsonl files with the following filenames:<br />
+                    <li>Submissions to the Leaderboard must be made in the form of a <b>zip</b> file containining the predicted
+                        jsonl files with the following filenames:<br />
                         <ul>
                             <li><code>me_vqa_casme3_test_pred.jsonl</code> (for the unseen CAS(ME)<sup>3</sup> ME clips)</li>
                             <li><code>me_vqa_samm_test_pred.jsonl</code> (for the unseen SAMM ME clips)</li>
@@ -322,9 +333,11 @@
                 <uL>
                     <LI><b>Curated ME VQA dataset</b>
                         <uL>
-                            <li> Please download the annotation from here <a href="https://megc2025.github.io/files/me_vqa_samm_casme2_smic.jsonl">Curated ME VQA dataset</a>.
+                            <li> Please download the annotation from here <a href="https://megc2025.github.io/files/me_vqa_samm_casme2_smic.jsonl">Curated ME
+                                VQA dataset</a>.
                             </li>
-                            <li> The Curated ME VQA dataset is improved from the MEGC2019 composite dataset with clips from SAMM, CASME II, and SMIC by adding QA pairs. Therefore, to access the ME clips, please follow the dataset request link below.
+                            <li> The Curated ME VQA dataset is improved from the MEGC2019 composite dataset with clips from SAMM, CASME II, and
+                                SMIC by adding QA pairs. Therefore, to access the ME clips, please follow the dataset request link below.
                             </li>
                         </uL>
                     <LI><b>SAMM with 159 ME clips at 100 fps.</b>
@@ -335,18 +348,20 @@
                                 with email subject: SAMM videos.
                             </li>
                             <li>
-                                Reference: Dvison, A. K., Lansley, C., Costen, N., Tan, K., & Yap, M. H. (2016). SAMM: A spontaneous micro facial movement dataset. IEEE Transactions on Affective Computing, 9(1), 116-129.
+                                Reference: Dvison, A. K., Lansley, C., Costen, N., Tan, K., & Yap, M. H. (2016). SAMM: A spontaneous micro facial movement
+                                dataset. IEEE Transactions on Affective Computing, 9(1), 116-129.
                             </li>
                         </uL>
 
                     <LI><b> CASME II with 247 ME clips at 200 fps.</b>
                         <uL>
                             <li> To download the dataset, please visit: <a
-                                    href="http://casme.psych.ac.cn/casme/e3">http://casme.psych.ac.cn/casme/e3</a>.  Download and fill in the license agreement form, submit throuth the website.
+                                    href="http://casme.psych.ac.cn/casme/e3">http://casme.psych.ac.cn/casme/e3</a>. Download and fill in the license agreement form, submit throuth the website.
                             >.
                             </li>
                             <li>
-                                Reference: Yan, W. J., Li, X., Wang, S. J., Zhao, G., Liu, Y. J., Chen, Y. H., & Fu, X. (2014). CASME II: An improved spontaneous micro-expression database and the baseline evaluation. PloS one, 9(1), e86041.
+                                Reference: Yan, W. J., Li, X., Wang, S. J., Zhao, G., Liu, Y. J., Chen, Y. H., & Fu, X. (2014). CASME II: An improved
+                                spontaneous micro-expression database and the baseline evaluation. PloS one, 9(1), e86041.
                             </li>
 
                         </uL>
@@ -369,7 +384,9 @@
                                 Download and fill in the license agreement form, submit throuth the website.
                             </li>
                             <li>
-                                Reference: Li, J., Dong, Z., Lu, S., Wang, S. J., Yan, W. J., Ma, Y., ... & Fu, X. (2022). CAS (ME)<sup>3</sup>: A third generation facial spontaneous micro-expression database with depth information and high ecological validity. IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 45, no. 3, pp. 2782-2800, doi: 10.1109/TPAMI.2022.3174895..
+                                Reference: Li, J., Dong, Z., Lu, S., Wang, S. J., Yan, W. J., Ma, Y., ... & Fu, X. (2022). CAS (ME)<sup>3</sup>: A third
+                                generation facial spontaneous micro-expression database with depth information and high ecological validity. IEEE Transactions
+                                on Pattern Analysis and Machine Intelligence, vol. 45, no. 3, pp. 2782-2800, doi: 10.1109/TPAMI.2022.3174895.
                             </li>
 
                         </uL>
@@ -380,7 +397,8 @@
                                 Download and fill in the license agreement form , email to <a href="Xiaobai.Li@oulu.fi">Xiaobai.Li@oulu.fi</a>.
                             </li>
                             <li>
-                                Reference: Li, X., Cheng, S., Li, Y., Behzad, M., Shen, J., Zafeiriou, S., ... & Zhao, G. (2022). 4DME: A spontaneous 4D micro-expression dataset with multimodalities. IEEE Transactions on Affective Computing.
+                                Reference: Li, X., Cheng, S., Li, Y., Behzad, M., Shen, J., Zafeiriou, S., ... & Zhao, G. (2022). 4DME: A spontaneous
+                                4D micro-expression dataset with multimodalities. IEEE Transactions on Affective Computing.
                             </li>
                         </uL>
                 </uL>
@@ -399,8 +417,8 @@
                 <p> Please note: All relevant submission deadlines are at 23:59 <a
                     href="https://www.timeanddate.com/time/zones/aoe">AoE</a> and paper submissions will follow guidelines as per ACM.</p>
                 <ul>
-                    <li><b>Challenge submission platform for STR task: TBC</b></li> 
-                    <li><b>Challenge submission platform for VQA task: <a href="https://www.codabench.org/competitions/8435/">Codabench site</a></b></ul></li>                
+                    <li><b>Challenge submission platform for STR task: <a href="https://www.codabench.org/competitions/8390/">Codabench site</a></b></ul></li> 
+                    <li><b>Challenge submission platform for VQA task: <a href="https://www.codabench.org/competitions/8435/">Codabench site</a></b></ul></li>
                     <li><b>Submission guidelines: TBC</b>
  <!--
                         <ul>
