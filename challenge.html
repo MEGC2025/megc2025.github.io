@@ -65,7 +65,7 @@
                 This year's Grand Challenge comprises of two tracks:
                 <ul>
                     <li><a href="#STR">Spot-then-Recognize (STR) Challenge</a> | <a href="https://www.codabench.org/competitions/8390/">Codabench site</a>  </li>
-                    <li><a href="#VQA">Visual Question Answering (VQA)</a> | <a href="https://www.codabench.org/competitions/8435/">Codabench site (coming soon)</a>  </li>
+                    <li><a href="#VQA">Visual Question Answering (VQA)</a> | <a href="https://www.codabench.org/competitions/8435/">Codabench site</a>  </li>
                 </ul>
                 <!--
                 <p><b>UPDATE</b>: The leaderboard will be closing on 13th July, 9:00, Anywhere on Earth (AoE), and the top 3 entries on the leaderboard will be invited to submit papers to the conference by <b>14th July AoE (the official hard deadline of ACM MM grand challenges)</b>.
@@ -120,8 +120,7 @@
                 </header>
 
                 <p>
-                    This year, we will be using the unseen cross-cultural long-video test sets to evaluate spotting algorithms'
-                    performances in a fairer manner.
+                    This year, we will be using the unseen cross-cultural test sets to evaluate algorithms' performances in a fairer manner.
                 </p>
                 <h3>Unseen Dataset for STR</h3>
 		        <ul>
@@ -157,9 +156,38 @@
                         </ul>
                     </li>
                 </ul>
+                <h3>Unseen Dataset for VQA</h3>
                 <ul>
-                    <h3>Unseen Dataset for VQA</h3>
-                    The details of unseen dataset for VQA will be announced soon.
+                    <li>The unseen testing set for VQA contains 24 ME clips, including 7 clips from SAMM (SAMM Challenge dataset) and 17 clips
+                        from different videos in CAS(ME)<sup>3</sup> (unreleased before). The frame rate for SAMM Challenge dataset
+                        is 200fps and the frame rate for CAS(ME)<sup>3</sup> is 30 fps. The participants should test on this unseen dataset.
+                    <LI>To obtain the <code><b>MEGC2025-testSet-ME-VQA</b></code>, download and fill in the <a
+                            href="files/SAMM_ReleaseAgreementV2.pdf">license agreement form of SAMM Challenge
+                        dataset</a> and
+                        the <a href="files/CAS3_clip_ReleaseAgreement.pdf">license agreement form of CAS(ME)<sup>3</sup>_clip</a>,
+                        upload the file through this
+                        link: <a href="https://www.wjx.top/vm/wxCeVHP.aspx#">https://www.wjx.top/vm/wxCeVHP.aspx#  </a>.
+
+                        <uL>
+                            <li> For the request from a bank or company, the participants are required to ask their director or
+                                CEO to sign the form.
+                            </li>
+                            <li> Reference:
+                                <ol>
+                                    <li> Li, J., Dong, Z., Lu, S., Wang, S.J., Yan, W.J., Ma, Y., Liu, Y., Huang, C. and
+                                        Fu, X. (2023). CAS(ME)<sup>3</sup>: A Third Generation Facial Spontaneous
+                                        Micro-Expression Database with Depth Information and High Ecological Validity.
+                                        <i>IEEE Transactions on Pattern Analysis and Machine Intelligence</i>, vol. 45, no. 3, pp. 2782-2800, 1 March 2023, doi: 10.1109/TPAMI.2022.3174895.
+                                    </li>
+                                    <li> Davison, A. K., Lansley, C., Costen, N., Tan, K., & Yap, M. H. (2016). SAMM: A
+                                        spontaneous micro-facial movement dataset. <i>IEEE Transactions on Affective
+                                        Computing</i>, 9(1),
+                                        116-129.
+                                    </li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             
             <!-- Track 1 STR Section -->
@@ -316,10 +344,10 @@
                             <li>BLEU and ROUGH-1 for all the answers. <em>(Higher the better)</em></li>
                         </ul>
                     </li>
-                    <li>Participants can fill in the test VQA to-answer josonl files and renamed them as xxx_pred.jsonl:<br />
+                    <li>Participants can fill in the test VQA to-answer josonl files and renamed them as xxx_pred.jsonl. These files are available at <a href="https://drive.google.com/drive/folders/1_t1cNv2DMFr43wY5WTng8U1hEICgbJIC?usp=sharing">Google Drive</a> and <a href="https://pan.baidu.com/s/1pKuFTcDgBGVKDzr0wAqNYA?pwd=p3uj">Baidu Drive</a>. <br />
                         <ul>
-                            <li><code><a href="https://megc2025.github.io/files/me_vqa_casme3_test_to_answer_v2.jsonl">me_vqa_casme3_test_to_answer.jsonl (comming soon)</a></code></li>
-                            <li><code><a href="https://megc2025.github.io/files/me_vqa_samm_test_to_answer_v2.jsonl">me_vqa_samm_test_to_answer.jsonl (comming soon)</a></code></li>
+                            <li><code>me_vqa_casme3_test_to_answer.jsonl</code></li>
+                            <li><code>me_vqa_samm_test_to_answer.jsonl</code></li>
                         </ul>
                     </li>
                     <li>Submissions to the Leaderboard must be made in the form of a <b>zip</b> file containining the predicted
@@ -419,7 +447,7 @@
                     href="https://www.timeanddate.com/time/zones/aoe">AoE</a> and paper submissions will follow guidelines as per ACM.</p>
                 <ul>
                     <li><b>Challenge submission platform for STR task: <a href="https://www.codabench.org/competitions/8390/">Codabench site</a></b></ul></li> 
-                    <li><b>Challenge submission platform for VQA task: <a href="https://www.codabench.org/competitions/8435/">Codabench site (coming soon)</a></b></ul></li>
+                    <li><b>Challenge submission platform for VQA task: <a href="https://www.codabench.org/competitions/8435/">Codabench site</a></b></ul></li>
                     <li><b>Submission guidelines: TBC</b>
  <!--
                         <ul>
