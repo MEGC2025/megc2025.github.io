@@ -103,6 +103,268 @@
                         paper submission </li>
                 </ul>
             </section>
+
+
+			<section id="competition-results" class="results-section">
+    <div class="section-header">
+        <h2>Top 3 for MEGC2025</h2>
+    
+    </div>
+    
+    <div class="task-container">
+        <div class="task-card">
+            <div class="task-title">
+                <h3>ME-VQA Task</h3>
+                <span class="task-subtitle">Micro-Expression Visual Question Answering</span>
+            </div>
+            
+            <div class="table-container">
+                <table class="results-table">
+                    <thead>
+                        <tr>
+                            <th class="ranking-col">Ranking</th>
+                            <th class="title-col">Paper Title</th>
+                            <th class="authors-col">Authors</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="first-place">
+                            <td class="ranking">1st Place</td>
+                            <td class="paper-title">Emotion-Qwen-VL: A fully fine-tuned multimodal large language model for micro-expression visual question answering</td>
+                            <td class="authors">Yujing Wang, Ruotong Fang, Xing Huang, Zhiyuan Han, Xiaoqing Lin, Yuhao Shan, Tong Chen</td>
+                        </tr>
+                        <tr class="second-place">
+                            <td class="ranking">2nd Place</td>
+                            <td class="paper-title">HierMEQA: A Relationship-Aware Hierarchical Framework for Consistent Micro-Expression Visual Question Answering</td>
+                            <td class="authors">Lingsi Zhu, Jun Yu, Yanjun Chi, Gongpeng Zhao, Yuefeng Zou, Fengzhao Sun</td>
+                        </tr>
+                        <tr class="third-place">
+                            <td class="ranking">3rd Place</td>
+                            <td class="paper-title">Temporal Information Enhanced Visual-Language Model for Facial Micro-expression Visual Question Answering</td>
+                            <td class="authors">Bin Cai, Haofu Yang, Jianxing Wang, Kaiyi Peng, Zhongxiang Cai, Wenbo Zhang, Jinshui Miao</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="task-card">
+            <div class="task-title">
+                <h3>ME-STR Task</h3>
+                <span class="task-subtitle">Micro-Expression Spotting and Recognition</span>
+            </div>
+            
+            <div class="table-container">
+                <table class="results-table">
+                    <thead>
+                        <tr>
+                            <th class="ranking-col">Ranking</th>
+                            <th class="title-col">Paper Title</th>
+                            <th class="authors-col">Authors</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="first-place">
+                            <td class="ranking">1st Place</td>
+                            <td class="paper-title">Boosting Micro-Expression Analysis via Prior-Guided Video-Level Regression</td>
+                            <td class="authors">Zizheng Guo, Bochao Zou, Yinuo Jia, Xiangyu Li, Huimin Ma</td>
+                        </tr>
+                        <tr class="second-place">
+                            <td class="ranking">2nd Place</td>
+                            <td class="paper-title">FGSL: Frequency-Gated Spatiotemporal Learning for Micro-Expression Spotting-Recognition</td>
+                            <td class="authors">Linsi Zhu, Yanjun Chi, Jun Yu, Gongpeng Zhao, Yuefeng Zou, Fengzhao Sun, XiLong Lu</td>
+                        </tr>
+                        <tr class="third-place">
+                            <td class="ranking">3rd Place</td>
+                            <td class="paper-title">Spatiotemporal Multimodal Large Language Model for Facial Micro-expression Spot-then-Recognize</td>
+                            <td class="authors">Dangen Li, Yuqun Ma, Hang Pan</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        .results-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .section-header p {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+        }
+        
+        .task-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        
+        .task-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .task-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        .task-title {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            padding: 20px 25px;
+        }
+        
+        .task-title h3 {
+            font-size: 1.6rem;
+            margin-bottom: 5px;
+        }
+        
+        .task-subtitle {
+            font-style: italic;
+            opacity: 0.9;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+        }
+        
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .results-table th {
+            background-color: #f8f9fa;
+            color: #2c3e50;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #eaeaea;
+        }
+        
+        .results-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eaeaea;
+        }
+        
+        .ranking-col {
+            width: 120px;
+        }
+        
+        .title-col {
+            width: 45%;
+        }
+        
+        .authors-col {
+            width: 40%;
+        }
+        
+        .ranking {
+            font-weight: bold;
+            text-align: center;
+            padding: 8px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            min-width: 90px;
+        }
+        
+        .first-place .ranking {
+            background-color: rgba(231, 76, 60, 0.1);
+            color: #e74c3c;
+        }
+        
+        .second-place .ranking {
+            background-color: rgba(243, 156, 18, 0.1);
+            color: #f39c12;
+        }
+        
+        .third-place .ranking {
+            background-color: rgba(46, 204, 113, 0.1);
+            color: #2ecc71;
+        }
+        
+        .paper-title {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .authors {
+            color: #555;
+            line-height: 1.5;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        tr:hover {
+            background-color: #e8f4fc;
+        }
+        
+        @media (max-width: 768px) {
+            .results-section {
+                padding: 15px;
+            }
+            
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .task-title {
+                padding: 15px 20px;
+            }
+            
+            .task-title h3 {
+                font-size: 1.4rem;
+            }
+            
+            .results-table th,
+            .results-table td {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+            
+            .ranking-col {
+                width: 100px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .ranking {
+                min-width: 70px;
+                font-size: 0.85rem;
+                padding: 6px 8px;
+            }
+            
+            .results-table th,
+            .results-table td {
+                padding: 8px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</section>
             
 
             <!-- Important Dates Section -->
